@@ -19,10 +19,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '20'
 
       - name: Install dependencies
-        run: npm install --no-fund --no-audit
+        env:
+          NPM_CONFIG_REGISTRY: https://registry.npmjs.org/
+          NPM_CONFIG_REPLACE_REGISTRY_HOST: always
+        run: npm ci --no-fund --no-audit
 
       - name: Build
         run: npm run build
