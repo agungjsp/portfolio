@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-10T22:38:42Z",
+  "title": "Design System: Agung Jayasukma Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "near-black": {
+        "role": "neutral",
+        "displayName": "Near Black",
+        "canonical": "#050505",
+        "tonalRamp": [
+          "oklch(12% 0.004 80)",
+          "oklch(18% 0.004 80)",
+          "oklch(25% 0.004 80)",
+          "oklch(34% 0.004 80)",
+          "oklch(46% 0.004 80)",
+          "oklch(62% 0.004 80)",
+          "oklch(78% 0.004 80)",
+          "oklch(94% 0.004 80)"
+        ]
+      },
+      "graphite-surface": {
+        "role": "neutral",
+        "displayName": "Graphite Surface",
+        "canonical": "#0a0a0a",
+        "tonalRamp": [
+          "oklch(13% 0.004 80)",
+          "oklch(19% 0.004 80)",
+          "oklch(27% 0.004 80)",
+          "oklch(36% 0.004 80)",
+          "oklch(48% 0.004 80)",
+          "oklch(64% 0.004 80)",
+          "oklch(80% 0.004 80)",
+          "oklch(95% 0.004 80)"
+        ]
+      },
+      "warm-white-text": {
+        "role": "neutral",
+        "displayName": "Warm White Text",
+        "canonical": "#f5f5f5",
+        "tonalRamp": [
+          "oklch(18% 0.004 80)",
+          "oklch(28% 0.004 80)",
+          "oklch(40% 0.004 80)",
+          "oklch(52% 0.004 80)",
+          "oklch(64% 0.004 80)",
+          "oklch(76% 0.004 80)",
+          "oklch(88% 0.004 80)",
+          "oklch(96% 0.004 80)"
+        ]
+      },
+      "ash-secondary-text": {
+        "role": "neutral",
+        "displayName": "Ash Secondary Text",
+        "canonical": "#a3a3a3",
+        "tonalRamp": [
+          "oklch(18% 0.003 80)",
+          "oklch(28% 0.003 80)",
+          "oklch(38% 0.003 80)",
+          "oklch(48% 0.003 80)",
+          "oklch(58% 0.003 80)",
+          "oklch(68% 0.003 80)",
+          "oklch(80% 0.003 80)",
+          "oklch(92% 0.003 80)"
+        ]
+      },
+      "smoke-muted-text": {
+        "role": "neutral",
+        "displayName": "Smoke Muted Text",
+        "canonical": "#525252",
+        "tonalRamp": [
+          "oklch(16% 0.003 80)",
+          "oklch(24% 0.003 80)",
+          "oklch(34% 0.003 80)",
+          "oklch(44% 0.003 80)",
+          "oklch(54% 0.003 80)",
+          "oklch(66% 0.003 80)",
+          "oklch(78% 0.003 80)",
+          "oklch(90% 0.003 80)"
+        ]
+      },
+      "signal-gold": {
+        "role": "primary",
+        "displayName": "Signal Gold",
+        "canonical": "#c9a96e",
+        "tonalRamp": [
+          "oklch(20% 0.05 80)",
+          "oklch(30% 0.07 80)",
+          "oklch(42% 0.09 80)",
+          "oklch(54% 0.10 80)",
+          "oklch(66% 0.11 80)",
+          "oklch(76% 0.09 80)",
+          "oklch(86% 0.06 80)",
+          "oklch(94% 0.03 80)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero name and title-card scale only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section-level thesis lines."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Short proof-oriented paragraphs capped around 50 to 55ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Eyebrows, metadata, and evidence tags."
+      }
+    },
+    "shadows": [
+      {
+        "name": "inset-bezel-highlight",
+        "value": "inset 0 1px 1px rgba(255, 255, 255, 0.08)",
+        "purpose": "Subtle machined lip inside bezel containers."
+      },
+      {
+        "name": "atmospheric-gold-orb",
+        "value": "radial-gradient(circle, var(--accent-glow) 0%, transparent 70%) with blur(80px)",
+        "purpose": "Environmental hero lighting only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-cinematic-out",
+        "value": "cubic-bezier(0.32, 0.72, 0, 1)",
+        "purpose": "Primary reveal and interaction easing."
+      },
+      {
+        "name": "reveal-standard",
+        "value": "opacity 0 to 1, translateY 40px to 0, blur(8px) to blur(0px), duration 0.8s",
+        "purpose": "ScrollReveal and project card entrance."
+      },
+      {
+        "name": "magnetic-press",
+        "value": "transform 0.4s cubic-bezier(0.32, 0.72, 0, 1); active scale(0.98)",
+        "purpose": "CTA press feedback."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA pill used for project viewing and contact routing.",
+      "html": "<button class=\"ds-btn-primary\"><span>View work</span><span class=\"ds-btn-primary-icon\">\u2197</span></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1.5rem; border: 0; border-radius: 9999px; background: var(--text-primary, #f5f5f5); color: var(--bg, #050505); font-family: Geist, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: background-color 500ms cubic-bezier(0.32, 0.72, 0, 1), transform 400ms cubic-bezier(0.32, 0.72, 0, 1); } .ds-btn-primary:hover { background: var(--accent, #c9a96e); } .ds-btn-primary:active { transform: scale(0.98); } .ds-btn-primary:focus-visible { outline: 2px solid var(--accent, #c9a96e); outline-offset: 4px; } .ds-btn-primary-icon { display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border-radius: 9999px; background: rgba(0, 0, 0, 0.08); transition: transform 500ms cubic-bezier(0.32, 0.72, 0, 1); } .ds-btn-primary:hover .ds-btn-primary-icon { transform: translate(4px, -1px); }"
+    },
+    {
+      "name": "Text Link",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Low-pressure secondary action with a quiet underline reveal.",
+      "html": "<a class=\"ds-text-link\" href=\"#contact\">Get in touch</a>",
+      "css": ".ds-text-link { position: relative; display: inline-flex; padding: 0.75rem 0; color: var(--text-secondary, #a3a3a3); font-family: Geist, system-ui, sans-serif; font-size: 0.875rem; text-decoration: none; transition: color 300ms ease; } .ds-text-link::after { content: ''; position: absolute; left: 0; bottom: 0.5rem; width: 100%; height: 1px; background: var(--accent, #c9a96e); transform: scaleX(0); transform-origin: left; transition: transform 400ms cubic-bezier(0.32, 0.72, 0, 1); } .ds-text-link:hover { color: var(--text-primary, #f5f5f5); } .ds-text-link:hover::after { transform: scaleX(1); } .ds-text-link:focus-visible { outline: 2px solid var(--accent, #c9a96e); outline-offset: 4px; border-radius: 4px; }"
+    },
+    {
+      "name": "Eyebrow Chip",
+      "kind": "chip",
+      "refersTo": "chip-eyebrow",
+      "description": "Section marker with mono precision and gold signal.",
+      "html": "<span class=\"ds-eyebrow\">Selected Work</span>",
+      "css": ".ds-eyebrow { display: inline-block; padding: 0.35rem 0.75rem; border: 1px solid var(--border, rgba(255, 255, 255, 0.08)); border-radius: 9999px; color: var(--accent, #c9a96e); font-family: 'Geist Mono', monospace; font-size: 0.65rem; font-weight: 500; letter-spacing: 0.2em; line-height: 1.2; text-transform: uppercase; }"
+    },
+    {
+      "name": "Tech Tag",
+      "kind": "chip",
+      "refersTo": "chip-tech-tag",
+      "description": "Small proof label for project stacks and competency levels.",
+      "html": "<span class=\"ds-tech-tag\">Kubernetes</span>",
+      "css": ".ds-tech-tag { display: inline-flex; align-items: center; padding: 0.25rem 0.75rem; border: 1px solid var(--border, rgba(255, 255, 255, 0.08)); border-radius: 9999px; color: var(--text-muted, #525252); font-family: 'Geist Mono', monospace; font-size: 0.75rem; line-height: 1rem; }"
+    },
+    {
+      "name": "Double Bezel Card",
+      "kind": "card",
+      "refersTo": "card-bezel",
+      "description": "Primary evidence container for projects, skills, and contact methods.",
+      "html": "<article class=\"ds-bezel-outer\"><div class=\"ds-bezel-inner\"><h3>Meridian Auth</h3><p>Enterprise-grade identity provider with OAuth 2.0, OIDC, and SAML support.</p></div></article>",
+      "css": ".ds-bezel-outer { background: var(--card-outer, rgba(255, 255, 255, 0.03)); border: 1px solid var(--border, rgba(255, 255, 255, 0.08)); border-radius: 1.5rem; padding: 2px; } .ds-bezel-inner { min-height: 12rem; display: flex; flex-direction: column; justify-content: space-between; padding: 2rem; border-radius: calc(1.5rem - 2px); background: var(--card-inner, rgba(255, 255, 255, 0.06)); box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.08); transition: background-color 700ms cubic-bezier(0.32, 0.72, 0, 1); } .ds-bezel-outer:hover .ds-bezel-inner { background: rgba(255, 255, 255, 0.08); } .ds-bezel-inner h3 { margin: 0 0 1rem; color: var(--text-primary, #f5f5f5); font-family: Geist, system-ui, sans-serif; font-size: 1.75rem; font-weight: 500; letter-spacing: -0.025em; transition: color 500ms cubic-bezier(0.32, 0.72, 0, 1); } .ds-bezel-outer:hover h3 { color: var(--accent, #c9a96e); } .ds-bezel-inner p { max-width: 50ch; margin: 0; color: var(--text-secondary, #a3a3a3); font-family: Geist, system-ui, sans-serif; font-size: 1rem; line-height: 1.625; }"
+    },
+    {
+      "name": "Floating Navigation",
+      "kind": "nav",
+      "refersTo": "navigation-floating-pill",
+      "description": "Top-centered pill navigation with a direct contact CTA.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-brand\" href=\"#\">AJ</a><a href=\"#about\">About</a><a href=\"#projects\">Projects</a><a class=\"ds-nav-cta\" href=\"#contact\">Let's talk <span>\u2197</span></a></nav>",
+      "css": ".ds-nav { display: inline-flex; align-items: center; gap: 0.125rem; padding: 0.5rem; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 9999px; background: rgba(10, 10, 10, 0.7); backdrop-filter: blur(40px); font-family: Geist, system-ui, sans-serif; } .ds-nav a { padding: 0.5rem 1rem; border-radius: 9999px; color: var(--text-secondary, #a3a3a3); font-size: 0.875rem; text-decoration: none; transition: color 300ms ease, background-color 300ms ease; } .ds-nav a:hover { color: var(--text-primary, #f5f5f5); background: rgba(255, 255, 255, 0.04); } .ds-nav .ds-nav-brand { color: var(--text-primary, #f5f5f5); font-weight: 500; } .ds-nav .ds-nav-brand:hover { color: var(--accent, #c9a96e); background: transparent; } .ds-nav .ds-nav-cta { display: inline-flex; align-items: center; gap: 0.5rem; margin-left: 0.25rem; background: var(--text-primary, #f5f5f5); color: var(--bg, #050505); font-weight: 500; } .ds-nav .ds-nav-cta:hover { background: var(--accent, #c9a96e); color: var(--bg, #050505); } .ds-nav .ds-nav-cta span { display: inline-flex; align-items: center; justify-content: center; width: 1.25rem; height: 1.25rem; border-radius: 9999px; background: rgba(0, 0, 0, 0.1); font-size: 0.75rem; }"
+    },
+    {
+      "name": "Contact Row",
+      "kind": "custom",
+      "refersTo": "contact-bezel-row",
+      "description": "Actionable contact proof row with gold icon well and directional arrow.",
+      "html": "<a class=\"ds-contact-row\" href=\"mailto:jsp.agung@gmail.com\"><span class=\"ds-contact-icon\">\u2709</span><span><small>Email</small><strong>jsp.agung@gmail.com</strong></span><b>\u2197</b></a>",
+      "css": ".ds-contact-row { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 1.5rem; border: 1px solid var(--border, rgba(255, 255, 255, 0.08)); border-radius: 1.5rem; background: var(--card-inner, rgba(255, 255, 255, 0.06)); box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.08); color: var(--text-primary, #f5f5f5); font-family: Geist, system-ui, sans-serif; text-decoration: none; transition: background-color 500ms cubic-bezier(0.32, 0.72, 0, 1); } .ds-contact-row:hover { background: rgba(255, 255, 255, 0.08); } .ds-contact-icon { display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; border-radius: 9999px; background: var(--accent-dim, rgba(201, 169, 110, 0.15)); color: var(--accent, #c9a96e); } .ds-contact-row small { display: block; margin-bottom: 0.125rem; color: var(--text-muted, #525252); font-size: 0.875rem; } .ds-contact-row strong { display: block; color: var(--text-primary, #f5f5f5); font-size: 1rem; font-weight: 500; } .ds-contact-row b { color: var(--text-muted, #525252); font-weight: 400; transition: color 500ms cubic-bezier(0.32, 0.72, 0, 1), transform 500ms cubic-bezier(0.32, 0.72, 0, 1); } .ds-contact-row:hover b { color: var(--accent, #c9a96e); transform: translate(4px, -1px); } .ds-contact-row:focus-visible { outline: 2px solid var(--accent, #c9a96e); outline-offset: 4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Secure Screening Room",
+    "overview": "This system feels like a private technical screening room: dark, quiet, precise, and built for fast judgment. Recruiters and clients should land in a controlled atmosphere where proof, trust, and next actions are easy to read. The visual mood is cinematic without theatrics: near-black surfaces, hairline structure, restrained gold signal, and slow reveals that feel deliberate rather than decorative.\n\nThe portfolio is a brand surface, but the brand is competence under pressure. It rejects generic SaaS-template aesthetics, decorative gradients, gimmicky motion, and bloated claim sections. Every visual decision must support the Product principle: Show proof, not claims.",
+    "keyCharacteristics": [
+      "Dark, tinted-black environment with warm-white text and muted ash hierarchy.",
+      "One rare signal color, burnished gold, used for trust cues, hover states, and selected attention.",
+      "Double-bezel containers with hairline borders instead of heavy cards.",
+      "Large, tight, confident type set in Geist, supported by compact Geist Mono labels.",
+      "Motion is slow, directional, and purposeful; it reveals hierarchy instead of performing."
+    ],
+    "rules": [
+      {
+        "name": "The Gold Scarcity Rule",
+        "body": "Gold is a signal, not a theme. If more than one small cluster per viewport is gold, the page starts lying about importance.",
+        "section": "colors"
+      },
+      {
+        "name": "The No Decorative Gradient Rule",
+        "body": "Atmospheric glow may exist as scene lighting. Loud, decorative gradients used without semantic purpose are prohibited.",
+        "section": "colors"
+      },
+      {
+        "name": "The Not-Quite-Black Rule",
+        "body": "Never use pure #000 or pure #fff. This system depends on softened blacks and warm whites.",
+        "section": "colors"
+      },
+      {
+        "name": "The Title Card Rule",
+        "body": "Display type is allowed to be large and quiet at the same time. Do not add gradients, outlines, shadows, or gimmicks to make it feel designed.",
+        "section": "typography"
+      },
+      {
+        "name": "The Mono Rationing Rule",
+        "body": "Geist Mono is for metadata and control surfaces only. Do not turn body copy into faux-terminal text.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Floating Cards Rule",
+        "body": "Cards do not float with generic shadows. They sit inside double bezels and separate through borders, tone, and inset highlights.",
+        "section": "elevation"
+      },
+      {
+        "name": "The State-Only Lift Rule",
+        "body": "Resting surfaces stay flat. Interaction may brighten the inner surface or move an arrow, but it must not create fake depth theatrics.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use Near Black as the primary environment and Warm White Text for the strongest information.",
+      "Do keep Signal Gold rare, precise, and attached to action or proof.",
+      "Do use the double-bezel card pattern for project, competency, and contact evidence.",
+      "Do keep body copy under roughly 55ch and make each paragraph prove capability or clarify next action.",
+      "Do keep motion slow, directional, and purposeful with cubic-bezier(0.32, 0.72, 0, 1).",
+      "Do preserve the direct path to DM and GitHub when adding sections or changing hierarchy."
+    ],
+    "donts": [
+      "Don't use generic SaaS-template aesthetics that feel interchangeable.",
+      "Don't use loud, decorative gradients without semantic purpose.",
+      "Don't add gimmicky motion that prioritizes spectacle over clarity.",
+      "Don't add bloated sections that restate claims without proof.",
+      "Don't use gradient text, glassmorphism as default, side-stripe borders, or hero-metric templates.",
+      "Don't turn the system into terminal cosplay with excessive monospace, neon accents, or fake command-line panels.",
+      "Don't add identical card grids with icon, heading, and text repeated endlessly.",
+      "Don't animate width, height, padding, or margin. Underlines and directional cues must use transform-based motion."
+    ]
+  }
+}

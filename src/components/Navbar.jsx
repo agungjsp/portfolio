@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion as Motion } from 'framer-motion';
 
 const links = [
   { label: 'About', href: '#about' },
@@ -16,7 +16,7 @@ export default function Navbar() {
         <div className="flex items-center gap-1 px-2 py-2 rounded-full bg-[rgba(10,10,10,0.7)] backdrop-blur-2xl border border-[rgba(255,255,255,0.08)]">
           <a
             href="#"
-            className="px-4 py-2 text-sm font-medium tracking-tight text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors duration-300"
+            className="focus-ring px-4 py-2 text-sm font-medium tracking-tight text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors duration-300"
           >
             AJ
           </a>
@@ -26,7 +26,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="px-4 py-2 text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300 rounded-full hover:bg-[rgba(255,255,255,0.04)]"
+                className="focus-ring px-4 py-2 text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300 rounded-full hover:bg-[rgba(255,255,255,0.04)]"
               >
                 {link.label}
               </a>
@@ -35,7 +35,7 @@ export default function Navbar() {
 
           <a
             href="#contact"
-            className="hidden md:flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full bg-[var(--text-primary)] text-[var(--bg)] hover:bg-[var(--accent)] hover:text-[var(--bg)] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
+            className="focus-ring hidden md:flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full bg-[var(--text-primary)] text-[var(--bg)] hover:bg-[var(--accent)] hover:text-[var(--bg)] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
           >
             <span>Let's talk</span>
             <span className="flex items-center justify-center w-5 h-5 rounded-full bg-[rgba(0,0,0,0.1)] text-xs">
@@ -45,15 +45,15 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden relative w-10 h-10 flex items-center justify-center"
+            className="focus-ring md:hidden relative w-11 h-11 flex items-center justify-center rounded-full"
             aria-label="Toggle menu"
           >
-            <motion.span
+            <Motion.span
               className="absolute w-5 h-px bg-[var(--text-primary)]"
               animate={open ? { rotate: 45, y: 0 } : { rotate: 0, y: -3 }}
               transition={{ duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
             />
-            <motion.span
+            <Motion.span
               className="absolute w-5 h-px bg-[var(--text-primary)]"
               animate={open ? { rotate: -45, y: 0 } : { rotate: 0, y: 3 }}
               transition={{ duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
@@ -64,7 +64,7 @@ export default function Navbar() {
 
       <AnimatePresence>
         {open && (
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -73,7 +73,7 @@ export default function Navbar() {
           >
             <div className="flex flex-col items-center gap-8">
               {links.map((link, i) => (
-                <motion.a
+                <Motion.a
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
@@ -85,13 +85,13 @@ export default function Navbar() {
                     delay: i * 0.1,
                     ease: [0.32, 0.72, 0, 1],
                   }}
-                  className="text-3xl font-medium text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors"
+                  className="focus-ring text-3xl font-medium text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors"
                 >
                   {link.label}
-                </motion.a>
+                </Motion.a>
               ))}
             </div>
-          </motion.div>
+          </Motion.div>
         )}
       </AnimatePresence>
     </>

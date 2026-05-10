@@ -1,5 +1,5 @@
 import ScrollReveal from './ScrollReveal';
-import { ArrowUpRight, InstagramLogo, Envelope } from '@phosphor-icons/react';
+import { ArrowUpRight, Envelope, GithubLogo, InstagramLogo } from '@phosphor-icons/react';
 
 export default function Contact() {
   return (
@@ -20,7 +20,7 @@ export default function Contact() {
             <ScrollReveal delay={0.2}>
               <p className="text-lg text-[var(--text-secondary)] leading-relaxed max-w-[50ch]">
                 Open to consulting, full-time roles, and ambitious side projects.
-                If it involves identity, security, or systems that need to scale — I want to hear about it.
+                If it involves identity, security, or systems that need to scale: I want to hear about it.
               </p>
             </ScrollReveal>
           </div>
@@ -29,11 +29,11 @@ export default function Contact() {
             <ScrollReveal delay={0.2}>
               <a
                 href="mailto:jsp.agung@gmail.com"
-                className="group magnetic-btn bezel-outer block"
+                className="group magnetic-btn focus-ring bezel-outer block rounded-[1.5rem]"
               >
                 <div className="bezel-inner p-6 flex items-center justify-between hover:bg-[rgba(255,255,255,0.08)] transition-colors duration-500">
-                  <div className="flex items-center gap-4">
-                    <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[var(--accent-dim)] text-[var(--accent)]">
+                  <div className="flex items-center gap-4 min-w-0">
+                    <span className="shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[var(--accent-dim)] text-[var(--accent)]">
                       <Envelope size={18} weight="light" />
                     </span>
                     <div>
@@ -41,7 +41,7 @@ export default function Contact() {
                       <div className="text-base font-medium text-[var(--text-primary)]">jsp.agung@gmail.com</div>
                     </div>
                   </div>
-                  <span className="text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-1 group-hover:-translate-y-px transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
+                  <span className="shrink-0 text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-1 group-hover:-translate-y-px transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
                     <ArrowUpRight size={20} weight="light" />
                   </span>
                 </div>
@@ -50,22 +50,46 @@ export default function Contact() {
 
             <ScrollReveal delay={0.3}>
               <a
+                href="https://github.com/agungjsp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group magnetic-btn focus-ring bezel-outer block rounded-[1.5rem]"
+              >
+                <div className="bezel-inner p-6 flex items-center justify-between hover:bg-[rgba(255,255,255,0.08)] transition-colors duration-500">
+                  <div className="flex items-center gap-4 min-w-0">
+                    <span className="shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[var(--accent-dim)] text-[var(--accent)]">
+                      <GithubLogo size={18} weight="light" />
+                    </span>
+                    <div className="min-w-0">
+                      <div className="text-sm text-[var(--text-muted)] mb-0.5">GitHub</div>
+                      <div className="text-base font-medium text-[var(--text-primary)] truncate">github.com/agungjsp</div>
+                    </div>
+                  </div>
+                  <span className="shrink-0 text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-1 group-hover:-translate-y-px transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
+                    <ArrowUpRight size={20} weight="light" />
+                  </span>
+                </div>
+              </a>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.4}>
+              <a
                 href="https://instagram.com/gungjayyy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group magnetic-btn bezel-outer block"
+                className="group magnetic-btn focus-ring bezel-outer block rounded-[1.5rem]"
               >
                 <div className="bezel-inner p-6 flex items-center justify-between hover:bg-[rgba(255,255,255,0.08)] transition-colors duration-500">
-                  <div className="flex items-center gap-4">
-                    <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[var(--accent-dim)] text-[var(--accent)]">
+                  <div className="flex items-center gap-4 min-w-0">
+                    <span className="shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[var(--accent-dim)] text-[var(--accent)]">
                       <InstagramLogo size={18} weight="light" />
                     </span>
-                    <div>
+                    <div className="min-w-0">
                       <div className="text-sm text-[var(--text-muted)] mb-0.5">Instagram</div>
-                      <div className="text-base font-medium text-[var(--text-primary)]">@gungjayyy</div>
+                      <div className="text-base font-medium text-[var(--text-primary)] truncate">@gungjayyy</div>
                     </div>
                   </div>
-                  <span className="text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-1 group-hover:-translate-y-px transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
+                  <span className="shrink-0 text-[var(--text-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-1 group-hover:-translate-y-px transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
                     <ArrowUpRight size={20} weight="light" />
                   </span>
                 </div>

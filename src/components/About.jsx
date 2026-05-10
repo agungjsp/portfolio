@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import ScrollReveal from './ScrollReveal';
 
 const skills = [
@@ -52,7 +52,7 @@ export default function About() {
 
             <ScrollReveal delay={0.2}>
               <p className="text-lg text-[var(--text-secondary)] leading-relaxed max-w-[55ch] mb-6">
-                I specialize in identity infrastructure — the systems that decide who gets access to what,
+                I specialize in identity infrastructure: the systems that decide who gets access to what,
                 when, and why. From SSO pipelines to fine-grained authorization, I build the guardrails
                 that keep modern software secure without sacrificing velocity.
               </p>
@@ -61,7 +61,7 @@ export default function About() {
             <ScrollReveal delay={0.3}>
               <p className="text-lg text-[var(--text-secondary)] leading-relaxed max-w-[55ch]">
                 On the engineering side, I ship full-stack applications with an obsession for clean
-                architecture, performance, and developer experience. Security is not a feature I bolt on —
+                architecture, performance, and developer experience. Security is not a feature I bolt on;
                 it is the foundation I build from.
               </p>
             </ScrollReveal>
@@ -75,15 +75,15 @@ export default function About() {
               </h3>
             </ScrollReveal>
 
-            <motion.div
+            <Motion.div
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: '-80px' }}
               className="grid grid-cols-1 sm:grid-cols-2 gap-3"
             >
-              {skills.map((skill, i) => (
-                <motion.div
+              {skills.map((skill) => (
+                <Motion.div
                   key={skill.label}
                   variants={itemVariants}
                   className="bezel-outer group cursor-default"
@@ -96,9 +96,9 @@ export default function About() {
                       {skill.level}
                     </span>
                   </div>
-                </motion.div>
+                </Motion.div>
               ))}
-            </motion.div>
+            </Motion.div>
           </div>
         </div>
       </div>

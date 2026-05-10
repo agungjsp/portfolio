@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import ScrollReveal from './ScrollReveal';
 
 const projects = [
@@ -58,15 +58,15 @@ export default function Projects() {
           </h2>
         </ScrollReveal>
 
-        <motion.div
+        <Motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
           className="grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-[minmax(200px,auto)]"
         >
-          {projects.map((project, i) => (
-            <motion.div
+          {projects.map((project) => (
+            <Motion.div
               key={project.title}
               variants={cardVariants}
               className={`${project.span} group`}
@@ -94,9 +94,9 @@ export default function Projects() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </Motion.div>
           ))}
-        </motion.div>
+        </Motion.div>
       </div>
     </section>
   );

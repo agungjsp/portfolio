@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
 export default function Hero() {
   return (
@@ -9,15 +9,15 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div className="order-2 lg:order-1">
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
           >
             <span className="eyebrow mb-6">Software Engineer & IAM Specialist</span>
-          </motion.div>
+          </Motion.div>
 
-          <motion.h1
+          <Motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.32, 0.72, 0, 1] }}
@@ -26,9 +26,9 @@ export default function Hero() {
             Agung
             <br />
             Jayasukma
-          </motion.h1>
+          </Motion.h1>
 
-          <motion.p
+          <Motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.32, 0.72, 0, 1] }}
@@ -36,9 +36,9 @@ export default function Hero() {
           >
             Building secure identity infrastructure and full-stack systems.
             I design access, automate trust, and ship production-grade software.
-          </motion.p>
+          </Motion.p>
 
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.32, 0.72, 0, 1] }}
@@ -46,7 +46,7 @@ export default function Hero() {
           >
             <a
               href="#projects"
-              className="group magnetic-btn inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[var(--text-primary)] text-[var(--bg)] text-sm font-medium hover:bg-[var(--accent)] transition-colors duration-500"
+              className="group magnetic-btn focus-ring inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[var(--text-primary)] text-[var(--bg)] text-sm font-medium hover:bg-[var(--accent)] transition-colors duration-500"
             >
               <span>View work</span>
               <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[rgba(0,0,0,0.08)] group-hover:translate-x-1 group-hover:-translate-y-px transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">
@@ -54,15 +54,23 @@ export default function Hero() {
               </span>
             </a>
             <a
+              href="https://github.com/agungjsp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-hover focus-ring text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300 py-3"
+            >
+              GitHub
+            </a>
+            <a
               href="#contact"
-              className="link-hover text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300 py-3"
+              className="link-hover focus-ring text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-300 py-3"
             >
               Get in touch
             </a>
-          </motion.div>
+          </Motion.div>
         </div>
 
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.32, 0.72, 0, 1] }}
@@ -79,22 +87,22 @@ export default function Hero() {
               </div>
             </div>
             {/* Orbiting dots */}
-            <motion.div
+            <Motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
               className="absolute inset-0"
             >
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1.5 w-3 h-3 rounded-full bg-[var(--accent)] opacity-60" />
-            </motion.div>
-            <motion.div
+            </Motion.div>
+            <Motion.div
               animate={{ rotate: -360 }}
               transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
               className="absolute inset-8"
             >
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1.5 w-2 h-2 rounded-full bg-[var(--text-secondary)] opacity-40" />
-            </motion.div>
+            </Motion.div>
           </div>
-        </motion.div>
+        </Motion.div>
       </div>
     </section>
   );
